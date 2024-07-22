@@ -5,6 +5,9 @@ import './App.css'
 import { Routes , Route } from 'react-router-dom'
 import LoginPage from './components/LoginPage'
 import TestLogin  from './components/TestLogin'
+import ClientList from './components/Clients/ClientList'
+import AddClient from './components/Clients/AddClient'
+import EditClient from './components/Clients/EditClient'
 
 function App() {
 
@@ -12,6 +15,9 @@ function App() {
     <Routes>
       <Route path='/' element ={<LoginPage />}></Route>
       <Route path='/test' element ={<TestLogin />}></Route>
+      <Route path='/clientList' element ={<ClientList />}></Route>
+      <Route path="/clients/add" element={<AddClient />} />
+      <Route path="/clients/edit/:clientId" element={<EditClient />} />
     </Routes>
   )
 }
